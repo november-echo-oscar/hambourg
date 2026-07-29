@@ -191,8 +191,8 @@
                   class="hidden absolute inset-0 bg-black/20 backdrop-blur-xs md:hidden z-[999]"
                 ></div>
 
-                <!-- PANNEAU VISIONNAGE DISCRET (Bulle Verticale Compacte) -->
-                <div id="viewer-panel" class="hidden absolute bottom-[80px] left-3 right-3 md:top-4 md:right-4 md:bottom-auto md:left-auto md:w-[380px] bg-white rounded-[24px] shadow-2xl z-[1000] overflow-hidden flex flex-col border border-slate-200 animate-popup max-h-[70vh]">
+                <!-- PANNEAU VISIONNAGE DISCRET (Bulle Verticale Compacte proche de la barre du bas) -->
+                <div id="viewer-panel" class="hidden absolute bottom-[58px] left-3 right-3 md:top-4 md:right-4 md:bottom-auto md:left-auto md:w-[380px] bg-white rounded-[24px] shadow-2xl z-[1000] overflow-hidden flex flex-col border border-slate-200 animate-popup max-h-[65vh]">
                     
                     <!-- Header avec Titre -->
                     <div class="px-4 py-3 flex items-center justify-between bg-white border-b border-slate-100 shrink-0">
@@ -203,10 +203,10 @@
                     </div>
 
                     <!-- Scrollable Content -->
-                    <div class="p-4 overflow-y-auto no-scrollbar flex flex-col gap-4">
+                    <div class="p-4 overflow-y-auto no-scrollbar flex flex-col gap-3">
                         
                         <!-- Image & Badges (Bannière compacte) -->
-                        <div class="relative w-full h-28 rounded-xl overflow-hidden shrink-0 shadow-sm">
+                        <div class="relative w-full h-24 rounded-xl overflow-hidden shrink-0 shadow-sm">
                             <img id="view-img" src="" class="w-full h-full object-cover" alt="Hambourg">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                             <div class="absolute bottom-2 left-2 right-2 flex flex-wrap gap-1.5">
@@ -244,13 +244,13 @@
                             <button onclick="switchDinnerOption('alt2')" id="tab-dinner-alt2" class="flex-1 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-wider transition-all text-slate-500 hover:text-slate-800">Repli 2</button>
                         </div>
 
-                        <!-- Description et Info Historique fusionnées -->
+                        <!-- Description et Info Historique -->
                         <div class="flex flex-col gap-1.5">
                             <p id="view-desc" class="text-slate-700 text-[13px] font-medium leading-relaxed"></p>
                         </div>
 
-                        <div class="bg-slate-50 px-3 py-2.5 rounded-xl border border-slate-100">
-                            <h4 class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1 flex items-center gap-1.5">
+                        <div class="bg-slate-50 px-3 py-2 rounded-xl border border-slate-100">
+                            <h4 class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-0.5 flex items-center gap-1.5">
                                 <i data-lucide="history" class="w-3 h-3"></i> Le saviez-vous ?
                             </h4>
                             <p id="view-hist" class="text-slate-500 text-xs italic leading-relaxed"></p>
@@ -260,7 +260,7 @@
                         <div class="flex gap-2 pt-1">
                             <button 
                               id="view-gps-btn"
-                              class="flex-1 bg-blue-600 text-white py-3 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-md shadow-blue-100 flex items-center justify-center gap-2 active:scale-95 transition-all"
+                              class="flex-1 bg-blue-600 text-white py-2.5 rounded-xl font-black text-[11px] uppercase tracking-widest shadow-md shadow-blue-100 flex items-center justify-center gap-2 active:scale-95 transition-all"
                             >
                               <i data-lucide="navigation" class="w-4 h-4"></i> Y Aller
                             </button>
@@ -447,7 +447,7 @@
               desc: "Option 1 : Stationnement au parking Contipark Speicherstadt pour démarrer le Jour 2.", 
               hist: "Point de départ matinal.", wiki: "https://www.contipark.de/", img: DEFAULT_IMG, isDay2ParkingStep: true
             },
-            { id: "d2-2", day: 2, order: 2, name: "2. Alsterarkaden & Rathaus", coords: [53.5505, 9.9935], time: "10:30", dur: "45m", desc: "Arcades vénitiennes et Hôtel de Ville.", hist: "Centre-ville historique.", wiki: "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_ville_de_Hambourg", img: DEFAULT_IMG },
+            { id: "d2-2", day: 2, order: 2, name: "2. Alsterarkaden & Rathaus", coords: [53.5505, 9.9935], time: "10:30", dur: "45m", desc: "Arcades vénitiennes et Hôtel de Ville.", hist: "Centre-ville historique.", wiki: "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_ville_de_Hambourg", img: https://i.postimg.cc/zf9PWqYf/1280px-00-3941-Alsterarkaden-Hamburg.jpg },
             { id: "d2-3", day: 2, order: 3, name: "3. Alsterfontäne (Lac Binnenalster)", coords: [53.5532, 9.9925], time: "11:20", dur: "30m", desc: "Grand lac intérieur et fontaine géante.", hist: "Promenade au bord de l'eau.", wiki: "https://de.wikipedia.org/wiki/Alsterfont%C3%A4ne", img: DEFAULT_IMG },
             { id: "d2-4", day: 2, order: 4, name: "4. Église Saint-Michel (Der Michel)", coords: [53.5484, 9.9789], time: "12:05", dur: "45m", desc: "Emblème baroque et tour panoramique.", hist: "Symbole des marins.", wiki: "https://fr.wikipedia.org/wiki/Eglise_Saint-Michel_de_Hambourg", img: DEFAULT_IMG },
             { id: "d2-5", day: 2, order: 5, name: "5. Krameramtsstuben (Ruelles Historiques)", coords: [53.5480, 9.9810], time: "12:55", dur: "30m", desc: "Maisons à colombages du XVIIe siècle.", hist: "Architecture préservée.", wiki: "https://de.wikipedia.org/wiki/Krameramtswohnungen", img: DEFAULT_IMG },
@@ -1072,7 +1072,6 @@
         function hideViewerPanels() {
             document.getElementById('viewer-panel').classList.add('hidden');
             document.getElementById('edit-panel').classList.add('hidden');
-            // Suppression de l'overlay sombre pour prioriser la carte
         }
 
         window.openViewer = function(place) {
@@ -1162,7 +1161,6 @@
             const panel = document.getElementById('edit-panel');
             const overlay = document.getElementById('panel-overlay');
             panel.classList.remove('hidden');
-            // Overlay sombre uniquement pour le mode édition
             overlay.classList.remove('hidden');
 
             document.getElementById('e-id').value = place.id;
@@ -1184,12 +1182,11 @@
             }
 
             renderMap(); 
-            fitItinerary();
+            // SUPPRESSION DE fitItinerary() ICI POUR ÉVITER LE RECENTRAGE FORCÉ SUR TOUT L'ITINÉRAIRE
         };
 
         window.closeEdit = function() {
             hideViewerPanels();
-            fitItinerary();
         };
 
         window.closeAllPanels = function() {
@@ -1250,7 +1247,6 @@
                 return;
             }
 
-            // DÉSACTIVATION DU SWIPE SUR LA CARTE
             const mapContainer = document.getElementById('map-container');
             if (!mapContainer.classList.contains('hidden')) {
                 return;
