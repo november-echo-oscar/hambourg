@@ -1282,6 +1282,13 @@
                 return;
             }
 
+            // DÉSACTIVATION DU SWIPE SUR LA CARTE
+            // Si la carte est affichée, on désactive le changement d'onglet par swipe pour ne pas gêner la navigation Leaflet
+            const mapContainer = document.getElementById('map-container');
+            if (!mapContainer.classList.contains('hidden')) {
+                return;
+            }
+
             const diffX = touchEndX - touchStartX;
             const diffY = touchEndY - touchStartY;
 
